@@ -7,8 +7,7 @@ module Authlogic
     end
 
     def copy_initializer
-      m.class_collisions class_name
-      directory File.join('app/models', class_path)
+      class_collisions class_name
       template 'session.rb', File.join('app/models', class_path, "#{file_name}.rb")
     end
   end
