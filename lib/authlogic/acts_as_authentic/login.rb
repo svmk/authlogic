@@ -130,7 +130,7 @@ module Authlogic
           klass.class_eval do
             if validate_login_field && login_field
               #validates_length_of login_field, validates_length_of_login_field_options
-              validates_format_of login_field, validates_format_of_login_field_options
+              #validates_format_of login_field, validates_format_of_login_field_options
               validates_uniqueness_of login_field, validates_uniqueness_of_login_field_options
             end
           end
