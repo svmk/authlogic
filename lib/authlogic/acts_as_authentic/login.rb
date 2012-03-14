@@ -35,10 +35,10 @@ module Authlogic
         # merge options into it. Checkout the convenience function merge_validates_length_of_login_field_options to merge
         # options.</b>
         #
-        # * <tt>Default:</tt> {:within => 3..100}
+        # * <tt>Default:</tt> {}
         # * <tt>Accepts:</tt> Hash of options accepted by validates_length_of
-        def validates_length_of_login_field_options(value = nil)
-          rw_config(:validates_length_of_login_field_options, value, {:within => 3..100})
+        def validates_length_of_login_field_options(value = {})
+          rw_config(:validates_length_of_login_field_options, value)
         end
         alias_method :validates_length_of_login_field_options=, :validates_length_of_login_field_options
         
